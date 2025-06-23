@@ -17,3 +17,9 @@ jobs:
       - name: /proc/self/mountinfo
         run: |
           cat /proc/self/mountinfo
+      - name: /sys/fs/cgroup/system.slice/hosted-compute-agent.service
+        run: |
+          ls /sys/fs/cgroup/system.slice/hosted-compute-agent.service
+      - name: /sys/fs/cgroup/system.slice/hosted-compute-agent.service/cpu.max
+        run: |
+          cat /sys/fs/cgroup/system.slice/hosted-compute-agent.service/cpu.max
